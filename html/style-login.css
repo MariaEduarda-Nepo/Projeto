@@ -1,0 +1,244 @@
+/* Variáveis e Reset (Reutilizadas da página anterior) */
+:root {
+    --primary-color: #9f36ff; /* Roxo principal para destaque */
+    --background-dark: #1a1a1a;
+    --text-light: #ffffff;
+    --container-bg-dark: #333333;
+    --input-bg-dark: #292929;
+    --link-color: #9f36ff;
+    --border-radius: 5px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* 1. Estilização do Navbar (Copie o CSS do header da página anterior) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #0d0d0d;
+    border-bottom: 2px solid #333333;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    margin-left: 10px;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.logo-text strong {
+    color: var(--text-light);
+    font-size: 1.2em;
+}
+
+.logo-text .fit {
+    color: var(--primary-color);
+}
+
+.logo-text .subtext {
+    display: block;
+    font-size: 0.6em;
+    color: #b3b3b3;
+    font-weight: 400;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.menu a:hover {
+    color: var(--primary-color);
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 25px;
+}
+
+/* 2. Layout Principal e Container de Login */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.login-container {
+    background-color: var(--container-bg-dark);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    width: 100%;
+    max-width: 450px; /* Limita a largura do formulário */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Título (TECHFIT LOGIN) */
+.login-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.techfit-text {
+    color: var(--text-light);
+}
+
+.fit-text {
+    color: var(--primary-color);
+}
+
+.login-text {
+    color: #cacaca; /* Cor do "LOGIN" ligeiramente mais clara que o texto principal */
+    margin-left: 5px;
+}
+
+/* 3. Estilização do Formulário */
+.login-form label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #e0e0e0;
+    text-transform: uppercase;
+}
+
+/* Estilização do Dropdown e Inputs */
+.select-wrapper,
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--input-bg-dark);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--text-light);
+    font-size: 1em;
+    outline: none;
+}
+
+/* Estilização do SELECT (Dropdown) */
+.select-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding: 0; /* Remove padding do wrapper */
+}
+
+.select-wrapper select {
+    appearance: none; /* Remove o estilo padrão do dropdown */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--input-bg-dark);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--text-light);
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* Estilização do Botão ENTRAR */
+.btn-entrar {
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-entrar:hover {
+    background-color: #7b29cc;
+}
+
+/* Mesma estilização para os campos de email e senha */
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--input-bg-dark);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--text-light);
+    font-size: 1em;
+    outline: none;
+    margin-bottom: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+    background-color: #232323;
+    color: #fff;
+}
+
+/* Link CADASTRO na parte inferior */
+.cadastro-link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.cadastro-link a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.cadastro-link a:hover {
+    color: #c468ff;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 500px) {
+    .login-container {
+        padding: 25px;
+    }
+    .login-title {
+        font-size: 1.8em;
+    }
+}
