@@ -45,8 +45,20 @@
                 <input type="password" id="senha" class="input-field" placeholder="Digite sua senha">
             </div>
 
-            <button class="btn-entrar">ENTRAR</button>
-
+            <button class="btn-entrar" onclick="verificarLogin()">ENTRAR</button>
+            <script>
+                function verificarLogin() {
+                    
+                    const email = document.getElementById('emailDocumento').value;
+                    const senha = document.getElementById('senha').value;
+                    // Aqui você pode adicionar validação real, por exemplo, via AJAX
+                    if (email === "admin@techfit.com" && senha === "123456") {
+                        window.location.href = "paginainicial.html";
+                    } else {
+                        alert("Email ou senha incorretos!");
+                    }
+                }
+            </script>
             <p class="cadastro-text">
                 Não possui Login? <a href="cadastro.html" class="cadastro-link">**Faça seu cadastro**</a>
             </p>
