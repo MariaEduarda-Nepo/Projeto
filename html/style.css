@@ -360,3 +360,205 @@ body {
     margin: 0 auto; /* Centraliza a imagem horizontalmente dentro do banner */
 
 }
+
+/* --- Seção de Testemunhos e Avaliações (mantido como está) --- */
+.testimonials-section {
+    background-color: #222;
+    padding: 60px 30px;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid var(--border-color);
+}
+
+.section-title {
+    font-size: 36px;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background-color: var(--card-bg-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.rating {
+    color: gold;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.rating .fas {
+    margin: 0 2px;
+}
+
+.testimonial-text {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.client-name {
+    font-size: 14px;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: auto;
+}
+
+.view-more-reviews {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 12px 25px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-more-reviews:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+}
+
+.view-more-reviews i {
+    margin-left: 10px;
+}
+
+/* --- Responsividade Geral --- */
+@media (max-width: 1024px) {
+    /* Em telas maiores, mas menores que um super-desktop, mantém o layout padrão */
+    .navbar-menu a, .login-btn, .register-btn {
+        margin-left: 15px; /* Reduz um pouco a margem */
+    }
+    .filiais-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        padding: 0 20px;
+    }
+    .promo-banner {
+        grid-column: span 1;
+        grid-row: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap; /* Permite quebrar a linha */
+        justify-content: space-between; /* Logo à esquerda, Toggle à direita */
+        padding: 10px 20px;
+        min-height: 60px; /* Altura menor para mobile */
+    }
+
+    .navbar-brand {
+        margin-right: 0;
+    }
+
+    /* Oculta o menu de navegação padrão em mobile */
+    .navbar-menu {
+        display: none; /* Esconde os links do menu principal em mobile */
+        flex-direction: column;
+        width: 100%; /* Ocupa a largura total */
+        text-align: center;
+        background-color: #000;
+        padding-bottom: 10px;
+        order: 3; /* Coloca o menu abaixo do logo e toggle */
+    }
+
+    /* Mostra o menu quando 'active' (acionado pelo JS do toggle) */
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-menu a {
+        margin: 10px 0;
+        padding: 8px 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .navbar-menu a:last-child {
+        border-bottom: none;
+    }
+
+    /* Mostra os botões LOGIN e CADASTRO em mobile */
+    .login-btn, .register-btn {
+        display: block; /* Visível em mobile */
+        margin: 10px auto;
+        width: 80%;
+    }
+
+    /* Mostra o botão de hambúrguer em mobile */
+    .menu-toggle {
+        display: block; /* Visível em mobile */
+        order: 2; /* Garante que o toggle esteja à direita do logo */
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-brand {
+        flex-direction: row; /* Mantém logo e texto na mesma linha */
+        align-items: center;
+        text-align: left;
+        width: auto;
+    }
+    .logo-text-group {
+        align-items: flex-start;
+    }
+    .logo-text-group strong, .logo-text-group .fit {
+        font-size: 20px;
+    }
+    .logo-text-group .subtext {
+        font-size: 12px;
+    }
+    /* Resto das regras para 480px... */
+    .search-section p {
+        font-size: 18px;
+    }
+    .search-input {
+        padding: 12px 15px;
+    }
+    .search-button {
+        padding: 12px 20px;
+    }
+    .filiais-container {
+        padding: 0 15px;
+        gap: 20px;
+    }
+    .testimonial-card {
+        padding: 20px;
+    }
+    .section-title {
+        font-size: 24px;
+    }
+}

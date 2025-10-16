@@ -1,244 +1,222 @@
-/* Variáveis e Reset (Reutilizadas da página anterior) */
+/* Variáveis de Cores */
 :root {
-    --primary-color: #9f36ff; /* Roxo principal para destaque */
-    --background-dark: #1a1a1a;
-    --text-light: #ffffff;
-    --container-bg-dark: #333333;
-    --input-bg-dark: #292929;
-    --link-color: #9f36ff;
-    --border-radius: 5px;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    --bg-color: #1a1a1a;
+    --card-bg-color: #2e2e2e;
+    --text-color: #f0f0f0;
+    --placeholder-color: #888;
+    --primary-color: #8a2be2; /* Roxo */
+    --hover-color: #9b4de2; /* Roxo mais claro */
+    --link-color: #8a2be2;
+    --border-color: #444;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--background-dark);
-    color: var(--text-light);
-    line-height: 1.6;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
 }
 
-/* 1. Estilização do Navbar (Copie o CSS do header da página anterior) */
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background-color: #0d0d0d;
-    border-bottom: 2px solid #333333;
+    background-color: #000; /* Preto mais escuro para o cabeçalho */
+    border-bottom: 1px solid var(--border-color);
 }
 
-.logo {
+.navbar-left {
     display: flex;
     align-items: center;
 }
 
-.logo-text {
-    margin-left: 10px;
-    line-height: 1.1;
-    text-transform: uppercase;
+.navbar-left .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
 }
 
-.logo-text strong {
-    color: var(--text-light);
-    font-size: 1.2em;
+.navbar-left .brand-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-right: 5px;
 }
 
-.logo-text .fit {
-    color: var(--primary-color);
+.navbar-left .brand-slogan {
+    font-size: 14px;
+    color: #800b8d; /* Verde do logo */
+    opacity: 0.7;
+    margin-top: 5px; /* Ajuste vertical para ficar abaixo do nome */
 }
 
-.logo-text .subtext {
-    display: block;
-    font-size: 0.6em;
-    color: #b3b3b3;
-    font-weight: 400;
-}
-
-.menu {
+.navbar-right {
     display: flex;
     align-items: center;
 }
 
-.menu a {
-    color: var(--text-light);
+.navbar-right .nav-item {
+    color: var(--text-color);
     text-decoration: none;
     margin-left: 25px;
-    font-weight: 500;
-    transition: color 0.3s;
-    text-transform: uppercase;
-    font-size: 0.9em;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-.menu a:hover {
+.navbar-right .nav-item:hover {
     color: var(--primary-color);
 }
 
-.menu-toggle {
-    background: none;
-    border: none;
-    color: var(--text-light);
-    font-size: 1.5em;
-    cursor: pointer;
+.menu-icon {
+    font-size: 30px;
+    color: var(--text-color);
     margin-left: 25px;
+    cursor: pointer;
 }
 
-/* 2. Layout Principal e Container de Login */
-.login-page {
+/* Login Container */
+.login-container {
+    flex-grow: 1; /* Faz o container ocupar o espaço restante */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 20px;
+    padding: 20px;
 }
 
-.login-container {
-    background-color: var(--container-bg-dark);
-    border-radius: var(--border-radius);
+.login-card {
+    background-color: var(--card-bg-color);
     padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     width: 100%;
-    max-width: 450px; /* Limita a largura do formulário */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    max-width: 400px; /* Limita a largura do card */
+    text-align: center;
 }
 
-/* Título (TECHFIT LOGIN) */
-.login-title {
-    text-align: center;
+.login-card h2 {
+    font-size: 28px;
+    color: var(--text-color);
     margin-bottom: 30px;
-    font-size: 2em;
-    font-weight: 700;
+    font-weight: normal;
     letter-spacing: 1px;
 }
 
-.techfit-text {
-    color: var(--text-light);
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
 }
 
-.fit-text {
-    color: var(--primary-color);
-}
-
-.login-text {
-    color: #cacaca; /* Cor do "LOGIN" ligeiramente mais clara que o texto principal */
-    margin-left: 5px;
-}
-
-/* 3. Estilização do Formulário */
-.login-form label {
+.form-group label {
     display: block;
-    margin-top: 20px;
     margin-bottom: 8px;
-    font-size: 0.9em;
-    font-weight: 500;
-    color: #e0e0e0;
-    text-transform: uppercase;
+    font-size: 14px;
+    color: var(--text-color);
+    font-weight: bold;
 }
 
-/* Estilização do Dropdown e Inputs */
-.select-wrapper,
-.login-form input[type="text"],
-.login-form input[type="password"] {
-    width: 100%;
-    padding: 15px;
-    background-color: var(--input-bg-dark);
-    border: none;
-    border-radius: var(--border-radius);
-    color: var(--text-light);
-    font-size: 1em;
+.input-field {
+    width: calc(100% - 20px); /* 100% menos o padding */
+    padding: 12px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: #3a3a3a; /* Fundo do input um pouco mais claro que o card */
+    color: var(--text-color);
+    font-size: 16px;
     outline: none;
+    transition: border-color 0.3s ease;
 }
 
-/* Estilização do SELECT (Dropdown) */
-.select-wrapper {
-    position: relative;
-    overflow: hidden;
-    padding: 0; /* Remove padding do wrapper */
+.input-field:focus {
+    border-color: var(--primary-color);
 }
 
-.select-wrapper select {
-    appearance: none; /* Remove o estilo padrão do dropdown */
+.input-field::placeholder {
+    color: var(--placeholder-color);
+}
+
+.select-field {
+    appearance: none; /* Remove a seta padrão do select */
     -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 100%;
-    padding: 15px;
-    background-color: var(--input-bg-dark);
-    border: none;
-    border-radius: var(--border-radius);
-    color: var(--text-light);
-    font-size: 1em;
-    cursor: pointer;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px; /* Espaço para o ícone */
 }
 
-/* Estilização do Botão ENTRAR */
 .btn-entrar {
     width: 100%;
     padding: 15px;
-    margin-top: 30px;
     background-color: var(--primary-color);
-    color: var(--text-light);
+    color: white;
     border: none;
-    border-radius: var(--border-radius);
-    font-size: 1.1em;
-    font-weight: 700;
-    text-transform: uppercase;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .btn-entrar:hover {
-    background-color: #7b29cc;
+    background-color: var(--hover-color);
 }
 
-/* Mesma estilização para os campos de email e senha */
-.login-form input[type="email"],
-.login-form input[type="password"] {
-    width: 100%;
-    padding: 15px;
-    background-color: var(--input-bg-dark);
-    border: none;
-    border-radius: var(--border-radius);
-    color: var(--text-light);
-    font-size: 1em;
-    outline: none;
-    margin-bottom: 5px;
-    transition: background-color 0.3s, color 0.3s;
+.cadastro-text {
+    margin-top: 30px;
+    font-size: 14px;
+    color: var(--text-color);
 }
 
-.login-form input[type="email"]:focus,
-.login-form input[type="password"]:focus {
-    background-color: #232323;
-    color: #fff;
-}
-
-/* Link CADASTRO na parte inferior */
-.cadastro-link {
-    text-align: center;
-    margin-top: 25px;
-    font-size: 0.9em;
-    color: #ccc;
-}
-
-.cadastro-link a {
+.cadastro-text .cadastro-link {
     color: var(--link-color);
     text-decoration: none;
-    font-weight: 700;
-    transition: color 0.3s;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-.cadastro-link a:hover {
-    color: #c468ff;
+.cadastro-text .cadastro-link:hover {
+    color: var(--hover-color);
+    text-decoration: underline;
 }
 
-/* Media Query para telas menores */
-@media (max-width: 500px) {
-    .login-container {
-        padding: 25px;
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
     }
-    .login-title {
-        font-size: 1.8em;
+    .navbar-right {
+        display: none; /* Esconde os itens de navegação em telas menores */
+        /* Você pode adicionar JavaScript para um menu responsivo de hambúrguer */
+    }
+    .menu-icon {
+        display: block; /* Mostra o ícone de hambúrguer */
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    .navbar-left {
+        width: 100%;
+        justify-content: center; /* Centraliza o logo e nome */
+        margin-bottom: 10px;
+    }
+    .login-card {
+        padding: 30px 20px;
+    }
+    .login-card h2 {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none; /* Esconde o ícone de hambúrguer em telas maiores */
     }
 }
