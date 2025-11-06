@@ -1,0 +1,302 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Variáveis CSS para facilitar a manutenção */
+:root {
+    --primary-color: #9f36ff; /* Roxo principal para destaque */
+    --background-dark: #1a1a1a;
+    --text-light: #ffffff;
+    --card-bg-dark: #333333;
+    --card-text-light: #f0f0f0;
+    --card-detail-text: #b3b3b3;
+    --border-radius-lg: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    margin: 40px 0 20px 0;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+h3 {
+    color: var(--text-light);
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* ==================================== */
+/* 1. Navbar (Cabeçalho Padronizado) */
+/* ==================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #0d0d0d; /* Fundo do topo mais escuro */
+    border-bottom: 2px solid #333333;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    margin-left: 10px;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.logo-text strong {
+    color: var(--text-light);
+    font-size: 1.2em;
+}
+
+.logo-text .fit {
+    color: var(--primary-color);
+}
+
+.logo-text .subtext {
+    display: block;
+    font-size: 0.6em;
+    color: var(--card-detail-text);
+    font-weight: 400;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Estilo para links de navegação (INÍCIO, CONTATO, PLANOS...) */
+.menu > a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: 500;
+    transition: color 0.3s;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.menu > a:hover {
+    color: var(--primary-color);
+}
+
+/* Container do Login/Cadastro e Menu Toggle */
+.utility-menu-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+.utility-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 0.9em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.login-btn:hover {
+    color: var(--primary-color);
+}
+
+.register-btn {
+    border: 1px solid var(--primary-color);
+}
+
+.register-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 0; 
+    /* Esconder em desktop por padrão, será visível em mobile */
+    display: none; 
+}
+
+/* ==================================== */
+/* 2. Conteúdo Principal e Cards de Planos */
+/* ==================================== */
+.principal {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px; /* Aumentei o gap para melhor espaçamento */
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--card-bg-dark); /* #333333 */
+    width: 350px; /* Reduzi a largura para caberem 3 lado a lado em telas maiores */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: var(--border-radius-lg);
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+}
+
+.card img {
+    width: 100%;
+    /* Mantenha a altura flexível, ou defina um max-height */
+    max-height: 350px; 
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.pagamentos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #555;
+    width: 100%;
+}
+
+.pagamentos h3 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.icones {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.icones img {
+    width: 40px;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icones img:hover {
+    transform: scale(1.1);
+}
+
+.icones button {
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.icones button:hover {
+    background-color: #8c26e0;
+}
+
+/* ==================================== */
+/* 3. Rodapé */
+/* ==================================== */
+footer {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0d0d0d;
+    height: 80px;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    margin-top: auto; /* Garante que ele fique no final da página */
+    border-top: 2px solid #333333;
+}
+
+footer h3 {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+/* ==================================== */
+/* 4. Responsividade (Mobile) */
+/* ==================================== */
+@media (max-width: 950px) {
+    /* Em telas menores, os cards podem ocupar a largura total ou serem ajustados */
+    .card {
+        width: 90%; 
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Oculta links de navegação e login/cadastro em telas menores */
+    .menu > a {
+        display: none;
+    }
+    
+    .utility-links {
+        display: none; 
+    }
+
+    /* Mostra o menu-toggle (ícone de hambúrguer) */
+    .menu-toggle {
+        display: block; 
+    }
+    
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
