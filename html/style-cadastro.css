@@ -241,3 +241,21 @@ body {
         font-size: 1.8em;
     }
 }
+footer {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0d0d0d;
+    height: 80px;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    margin-top: auto; /* Garante que ele fique no final da página */
+    border-top: 2px solid #333333;
+}
+
+footer h3 {
+    font-size: 0.9em;
+    margin: 0;
+}
