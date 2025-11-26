@@ -1,8 +1,8 @@
 <?php
 // Configurações do Banco de Dados
-define('DB_SERVER', '8080');
-define('DB_USERNAME', 'root'); // Mude para o seu usuário do MySQL
-define('DB_PASSWORD', '');     // Mude para a sua senha do MySQL
+define('DB_SERVER', 'localhost');  // CORRIGIDO: era '3306'
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', 'senaisp');
 define('DB_NAME', 'TechFit');
 
 class UsuarioDAO {
@@ -21,7 +21,8 @@ class UsuarioDAO {
     public function cadastrar($nome, $email, $senha, $documento, $tipo, $id_filial) {
         $stmt = $this->conn->prepare("INSERT INTO USUARIOS (Nome, Email, Senha, Documento, Tipo, ID_FILIAL) VALUES (?, ?, ?, ?, ?, ?)");
         
-        // Em um projeto real, a senha deveria ser hasheada aqui antes de inserir: $senhaHashed = password_hash($senha, PASSWORD_DEFAULT);
+        // Em um projeto real, a senha deveria ser hasheada aqui antes de inserir
+        // $senhaHashed = password_hash($senha, PASSWORD_DEFAULT);
         $stmt->bind_param("sssssi", $nome, $email, $senha, $documento, $tipo, $id_filial);
         
         $result = $stmt->execute();

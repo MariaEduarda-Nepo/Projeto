@@ -6,21 +6,28 @@ require_once 'UsuarioDAO.php';
 $usuarioDAO = new UsuarioDAO();
 
 // --- LER/READ (Lista e exibe todos os usuários) ---
-function lerUsuarios(UsuarioDAO $dao) {
+function lerUsuarios($dao) {
     $usuarios = $dao->lerTodos();
     
     if (count($usuarios) > 0) {
         foreach($usuarios as $row) {
             echo "<tr>";
-            echo "<td>" . $row['ID_USUARIO'] . "</td>";
-            echo "<td>" . $row['Nome'] . "</td>";
-            echo "<td>" . $row['Email'] . "</td>";
-            echo "<td>" . $row['Tipo'] . "</td>";
-            echo "<td>" . $row['ID_FILIAL'] . "</td>";
+            echo "<td>" . htmlspecialchars($row['ID_USUARIO']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['Nome']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['Email']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['Tipo']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['ID_FILIAL']) . "</td>";
             echo "<td>";
-            // Os botões de ação continuam chamando a função JS do index.html
-            echo "<button class='edit-btn' onclick=\"preencherFormulario('" . $row['ID_USUARIO'] . "', '" . $row['Nome'] . "', '" . $row['Email'] . "', '" . $row['Documento'] . "', '" . $row['Tipo'] . "', '" . $row['ID_FILIAL'] . "', '')\">Editar</button>";
-            echo "<button class='delete-btn' onclick='excluirUsuario(" . $row['ID_USUARIO'] . ")'>Excluir</button>";
+            // Os botões de ação chamam a função JS do index.html
+            echo "<button class='edit-btn' onclick=\"preencherFormulario('" 
+                . htmlspecialchars($row['ID_USUARIO']) . "', '" 
+                . htmlspecialchars($row['Nome']) . "', '" 
+                . htmlspecialchars($row['Email']) . "', '" 
+                . htmlspecialchars($row['Documento']) . "', '" 
+                . htmlspecialchars($row['Tipo']) . "', '" 
+                . htmlspecialchars($row['ID_FILIAL']) . "')\">Editar</button>";
+            echo "<button class='delete-btn' onclick='excluirUsuario(" 
+                . htmlspecialchars($row['ID_USUARIO']) . ")'>Excluir</button>";
             echo "</td>";
             echo "</tr>";
         }
@@ -57,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['acao'])) {
         }
     }
     
-    header("Location: index.html?msg=" . urlencode($mensagem));
+    header("Location: index.php?msg=" . urlencode($mensagem));
     exit();
 }
 
@@ -70,17 +77,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['acao']) && $_GET['acao']
         $mensagem = "Erro ao excluir. Verifique se há registros dependentes (Foreign Keys).";
     }
     
-    header("Location: index.html?msg=" . urlencode($mensagem));
+    header("Location: index.php?msg=" . urlencode($mensagem));
     exit();
 }
 
-// Garante que a função lerUsuarios seja chamada com o objeto DAO quando o index.html a incluir.
-if (!function_exists('lerUsuariosWrapper')) {
-    function lerUsuariosWrapper() {
-        global $usuarioDAO;
-        lerUsuarios($usuarioDAO);
-    }
-}
-
-// Quando o index.html incluir este arquivo, ele chamará lerUsuariosWrapper no <tbody>
 ?>
