@@ -1,0 +1,186 @@
+/* =======================================
+   ESTILOS GERAIS/RESET
+   ======================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    background: linear-gradient(135deg, #1f1f1f, #3a0f6f);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* =======================================
+   HEADER/NAVBAR PADRONIZADO
+   ======================================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: rgba(24, 24, 24, 0.95);
+    border-bottom: 2px solid #a83bd3;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo-text strong {
+    font-size: 24px;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.logo-text .fit {
+    color: #a83bd3;
+    font-weight: bold;
+}
+
+.logo-text .subtext {
+    font-size: 10px;
+    color: #cccccc;
+}
+
+/* Menu de Navegação */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.main-links {
+    display: flex;
+    gap: 30px;
+}
+
+.main-links a,
+.menu > a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+.main-links a:hover,
+.menu > a:hover {
+    color: #a83bd3;
+}
+
+/* Botões de Login e Cadastro */
+.utility-links {
+    display: flex;
+    gap: 15px;
+    margin-left: 20px;
+}
+
+.login-btn,
+.register-btn {
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.login-btn {
+    background-color: transparent;
+    border: 2px solid #a83bd3;
+    color: #a83bd3;
+}
+
+.login-btn:hover {
+    background-color: #a83bd3;
+    color: #ffffff;
+}
+
+.register-btn {
+    background: linear-gradient(90deg, #6a0dad, #a83bd3);
+    color: white;
+    border: none;
+}
+
+.register-btn:hover {
+    background: linear-gradient(90deg, #8e2bd1, #b74be0);
+}
+
+/* =======================================
+   FOOTER PADRONIZADO
+   ======================================= */
+footer {
+    background-color: rgba(10, 10, 10, 0.95);
+    color: #cccccc;
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 2px solid #a83bd3;
+    margin-top: 50px;
+}
+
+footer h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+footer a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+footer a:hover {
+    transform: scale(1.1);
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+}
+
+/* =======================================
+   RESPONSIVIDADE
+   ======================================= */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .utility-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .login-btn,
+    .register-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
