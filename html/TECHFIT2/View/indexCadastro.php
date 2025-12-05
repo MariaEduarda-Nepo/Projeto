@@ -66,13 +66,13 @@ $lista = $controller->ler();
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="/View/cadastro.css">
     <title>Cadastro - TechFit</title>
 
     <?php if($sucesso): ?>
     <script>
         setTimeout(() => { 
-            window.location.href = 'indexLogin.php'; 
+            window.location.href = '/login'; 
         }, 5000);
     </script>
     <?php endif; ?>
@@ -81,27 +81,7 @@ $lista = $controller->ler();
 <body>
 
 <!-- CABEÇALHO PADRONIZADO -->
-<header class="navbar">
-    <div class="logo">
-        <img src="img/logotechfit-removebg-preview.png" alt="Logo TechFit">
-        <div class="logo-text">
-            <strong>TECH<span class="fit">FIT</span></strong>
-            <span class="subtext">FUTURE FITNESS</span>
-        </div>
-    </div>
-
-    <nav class="menu">
-        <div class="main-links">
-            <a href="indexpaginainicial.php">INÍCIO</a>
-            <a href="indexplanos.php">PLANOS</a>
-            <a href="indexagendaraulas.php">AGENDAR AULAS</a>
-        </div>
-        <div class="utility-links">
-            <a href="indexlogin.php" class="login-btn">LOGIN</a>
-            <a href="indexCadastro.php" class="register-btn">CADASTRO</a>
-        </div>
-    </nav>
-</header>
+<?php require_once 'include/header.php'; ?>
 
 <div class="Container">
 
@@ -129,7 +109,7 @@ $lista = $controller->ler();
             <button type="submit">Cadastrar</button>
         </form>
         <p style="text-align:center;margin-top:12px;">
-            <a href="indexLogin.php" style="color:#a83bd3;text-decoration:none;">
+            <a href="/login" style="color:#a83bd3;text-decoration:none;">
                 Ja tenho uma conta
             </a>
         </p>
@@ -140,15 +120,7 @@ $lista = $controller->ler();
 </div>
 
 <!-- RODAPÉ PADRONIZADO -->
-<footer>
-    <h3>Desenvolvido por: Daniel Charlo e Maria Eduarda Nepomuceno</h3>
-    <a href="https://github.com/MariaEduarda-Nepo" target="_blank">
-        <img src="img/Github.png" alt="GitHub Maria Eduarda">
-    </a>
-    <a href="https://github.com/DanielCharlo" target="_blank">
-        <img src="img/Github.png" alt="GitHub Daniel">
-    </a>
-</footer>
+<?php require_once 'include/footer.php'; ?>
 
 </body>
 </html>

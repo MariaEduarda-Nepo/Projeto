@@ -4,33 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechFit - Página Inicial</title>
-    <link rel="stylesheet" href="header-footer.css">
-    <link rel="stylesheet" href="paginainicial.css">
+    <link rel="stylesheet" href="View/header-footer.css">
+    <link rel="stylesheet" href="View/paginainicial.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
     <!-- CABEÇALHO PADRONIZADO -->
-    <header class="navbar">
-        <div class="logo">
-            <img src="img/logotechfit-removebg-preview.png" alt="Logo TechFit">
-            <div class="logo-text">
-                <strong>TECH<span class="fit">FIT</span></strong>
-                <span class="subtext">FUTURE FITNESS</span>
-            </div>
-        </div>
-        <nav class="menu">
-            <div class="main-links">
-                <a href="indexpaginainicial.php">INÍCIO</a>
-                <a href="indexplanos.php">PLANOS</a>
-                <a href="indexagendaraulas.php">AGENDAR AULAS</a>
-            </div>
-            <div class="utility-links">
-                <a href="indexlogin.php" class="login-btn">LOGIN</a>
-                <a href="indexCadastro.php" class="register-btn">CADASTRO</a>
-            </div>
-        </nav>
-    </header>
+    <?php require_once 'include/header.php'; ?>
 
     <main>
         <div class="search-section">
@@ -44,7 +25,7 @@
         <section class="filiais-container">
             <div class="filial-card">
                 <div class="card-image-wrapper">
-                    <img src="img/ImagemAcademia1.png" alt="Academia Filial 1">
+                    <img src="View/img/ImagemAcademia1.png" alt="Academia Filial 1">
                 </div>
                 <div class="card-content">
                     <h2 class="filial-title">FILIAL 1</h2>
@@ -62,12 +43,12 @@
             </div>
 
             <div class="promo-banner">
-                <img src="img/promocao.png" alt="Transforme seu corpo na TechFit">
+                <img src="/View/img/promocao.png" alt="Transforme seu corpo na TechFit">
             </div>
 
             <div class="filial-card">
                 <div class="card-image-wrapper">
-                    <img src="img/ImagemAcademia2.png" alt="Academia Filial 2">
+                    <img src="View/img/ImagemAcademia2.png" alt="Academia Filial 2">
                 </div>
                 <div class="card-content">
                     <h2 class="filial-title">FILIAL 2</h2>
@@ -86,7 +67,7 @@
 
             <div class="filial-card highlight-card">
                 <div class="card-image-wrapper">
-                    <img src="img/ImagemAcademia3.png" alt="Academia Filial 3">
+                    <img src="View/img/ImagemAcademia3.png" alt="Academia Filial 3">
                 </div>
                 <div class="card-content">
                     <h2 class="filial-title">FILIAL 3</h2>
@@ -105,7 +86,7 @@
 
             <div class="filial-card highlight-card">
                 <div class="card-image-wrapper">
-                    <img src="img/ImagemAcademia4.jpg" alt="Academia Filial 4">
+                    <img src="View/img/ImagemAcademia4.jpg" alt="Academia Filial 4">
                 </div>
                 <div class="card-content">
                     <h2 class="filial-title">FILIAL 4</h2>
@@ -124,7 +105,7 @@
 
             <div class="filial-card highlight-card">
                 <div class="card-image-wrapper">
-                    <img src="img/ImagemAcademia5.jpg" alt="Academia Filial 5">
+                    <img src="View/img/ImagemAcademia5.jpg" alt="Academia Filial 5">
                 </div>
                 <div class="card-content">
                     <h2 class="filial-title">FILIAL 5</h2>
@@ -182,11 +163,7 @@
     </main>
 
     <!-- RODAPÉ PADRONIZADO -->
-    <footer>
-        <h3>Desenvolvido por: Daniel Charlo e Maria Eduarda Nepomuceno</h3>
-        <a href="https://github.com/MariaEduarda-Nepo" target="_blank"><img src="img/Github.png" alt="GitHub Maria Eduarda"></a>
-        <a href="https://github.com/DanielCharlo" target="_blank"><img src="img/Github.png" alt="GitHub Daniel"></a>
-    </footer>
+    <?php require_once 'include/footer.php'; ?>
 
 </body>
 </html>
