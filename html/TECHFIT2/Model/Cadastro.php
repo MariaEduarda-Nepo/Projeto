@@ -3,34 +3,40 @@ class Cadastro {
     private $id;
     private $tipo;
     private $nome;
-    private $senha;
     private $email;
-    private $documento;
+    private $senha;
+    private $cpf;
+    private $telefone;
     private $datanascimento;
 
-    public function __construct($tipo, $nome, $senha, $email, $documento, $datanascimento, $id = null){
+    public function __construct($tipo, $nome, $email, $senha, $cpf, $telefone, $datanascimento, $id = null) {
         $this->id = $id;
         $this->tipo = $tipo;
         $this->nome = $nome;
-        $this->senha = $senha;
         $this->email = $email;
-        $this->documento = $documento;
+        $this->senha = $senha;
+        $this->cpf = $cpf;
+        $this->telefone = $telefone;
         $this->datanascimento = $datanascimento;
-    } 
+    }
 
+    // GETTERS
     public function getId() { return $this->id; }
     public function getTipo() { return $this->tipo; }
     public function getNome() { return $this->nome; }
-    public function getSenha() { return $this->senha; }
     public function getEmail() { return $this->email; }
-    public function getDocumento() { return $this->documento; }
+    public function getSenha() { return $this->senha; }
+    public function getCpf() { return $this->cpf; }
+    public function getTelefone() { return $this->telefone; }
     public function getDataNascimento() { return $this->datanascimento; }
 
-    public function setTipo($tipo): self { $this->tipo = $tipo; return $this; }
-    public function setNome($nome): self { $this->nome = $nome; return $this; }
-    public function setSenha($senha): self { $this->senha = $senha; return $this; }
-    public function setEmail($email): self { $this->email = $email; return $this; }
-    public function setDocumento($documento): self { $this->documento = $documento; return $this; }
+    // SETTERS
+    public function setTipo($tipo) { $this->tipo = $tipo; }
+    public function setNome($nome) { $this->nome = $nome; }
+    public function setEmail($email) { $this->email = $email; }
+    public function setSenha($senha) { $this->senha = $senha; }
+    public function setCpf($cpf) { $this->cpf = $cpf; }
+    public function setTelefone($telefone) { $this->telefone = $telefone; }
     public function setDataNascimento($datanascimento) { $this->datanascimento = $datanascimento; }
 }
 ?>

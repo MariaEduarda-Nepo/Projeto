@@ -12,7 +12,7 @@ class LoginController {
 
     public function login($email, $senha) {
 
-        session_start();
+        // session_start() já é chamado no arquivo que usa este controller
 
         $usuario = $this->dao->buscarPorEmail($email);
 
@@ -25,13 +25,21 @@ class LoginController {
             return ["erro", "Senha incorreta!"];
         }
 
+        // Garantir que o nome existe e está correto
+        $nomeUsuario = isset($usuario['nome']) ? trim($usuario['nome']) : '';
+        
+        if (empty($nomeUsuario)) {
+            return ["erro", "Erro ao recuperar dados do usuário!"];
+        }
+
         // Criar sessão do usuário
         $_SESSION['id'] = $usuario['id'];
         $_SESSION['tipo'] = $usuario['tipo'];
-        $_SESSION['nome'] = $usuario['nome'];
+        $_SESSION['nome'] = $nomeUsuario;
         $_SESSION['email'] = $usuario['email'];
-        $_SESSION['documento'] = $usuario['documento'];
-        $_SESSION['nascimento'] = $usuario['datanascimento'];
+        $_SESSION['cpf'] = isset($usuario['cpf']) ? $usuario['cpf'] : '';
+        $_SESSION['telefone'] = isset($usuario['telefone']) ? $usuario['telefone'] : '';
+        $_SESSION['nascimento'] = isset($usuario['datanascimento']) ? $usuario['datanascimento'] : '';
 
         return ["sucesso", "Login realizado com sucesso!"];
     }

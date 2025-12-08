@@ -10,18 +10,32 @@ class LoginDAO {
         $this->conn = Connection::getInstance();
     }
 
-    // Buscar usuário somente pelo login
+    // Buscar usuário pelo email
     public function buscarPorEmail($email) {
         $stmt = $this->conn->prepare("
-            SELECT id, tipo, nome, senha, email, documento, datanascimento
+            SELECT 
+                id, 
+                tipo, 
+                nome, 
+                email, 
+                senha, 
+                cpf, 
+                telefone, 
+                datanascimento
             FROM Cadastros 
             WHERE email = :email 
             LIMIT 1
         ");
 
         $stmt->execute([':email' => $email]);
-
-        return $stmt->fetch(PDO::FETCH_ASSOC); // LoginController espera array
+        $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        // Debug: verificar se o nome está vindo corretamente
+        if ($resultado && isset($resultado['nome'])) {
+            $resultado['nome'] = trim($resultado['nome']);
+        }
+        
+        return $resultado;
     }
 
     // Registrar último acesso (futuramente, se quiser)

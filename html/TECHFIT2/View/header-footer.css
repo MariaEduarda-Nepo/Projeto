@@ -1,23 +1,24 @@
-/* =======================================
-   ESTILOS GERAIS/RESET
-   ======================================= */
+/* =============================================
+   HEADER-FOOTER.CSS - Estilos Comuns do Site
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
     background: linear-gradient(135deg, #1f1f1f, #3a0f6f);
+    color: #ffffff;
     line-height: 1.6;
     min-height: 100vh;
 }
 
-/* =======================================
-   HEADER/NAVBAR PADRONIZADO
-   ======================================= */
+/* -------------------- NAVBAR -------------------- */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -38,14 +39,16 @@ body {
 }
 
 .logo-text {
+    margin-left: 10px;
+    line-height: 1.1;
+    text-transform: uppercase;
     display: flex;
     flex-direction: column;
-    line-height: 1.2;
 }
 
 .logo-text strong {
-    font-size: 24px;
     color: #ffffff;
+    font-size: 24px;
     letter-spacing: 2px;
 }
 
@@ -55,26 +58,24 @@ body {
 }
 
 .logo-text .subtext {
+    display: block;
     font-size: 10px;
     color: #cccccc;
+    font-weight: 400;
+    letter-spacing: 1px;
 }
 
-/* Menu de Navegação */
+/* -------------------- MENU -------------------- */
 .menu {
     display: flex;
     align-items: center;
     gap: 30px;
 }
 
-.main-links {
-    display: flex;
-    gap: 30px;
-}
-
-.main-links a,
-.menu > a {
+.menu a {
     color: #ffffff;
     text-decoration: none;
+    margin-left: 10px;
     font-weight: 500;
     transition: color 0.3s;
     text-transform: uppercase;
@@ -82,26 +83,77 @@ body {
     letter-spacing: 1px;
 }
 
-.main-links a:hover,
-.menu > a:hover {
+.menu a:hover {
     color: #a83bd3;
 }
 
-/* Botões de Login e Cadastro */
+/* -------------------- INFO DO USUÁRIO -------------------- */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 20px;
+}
+
+.user-greeting {
+    color: #ffffff;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-greeting i {
+    color: #a83bd3;
+    font-size: 1.2em;
+}
+
+.user-greeting strong {
+    color: #a83bd3;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    background: linear-gradient(135deg, #ff4444, #cc0000);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.85em;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.logout-btn:hover {
+    background: linear-gradient(135deg, #ff6666, #ff0000);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 68, 68, 0.4);
+}
+
+.logout-btn i {
+    font-size: 1em;
+}
+
+/* -------------------- BOTÕES UTILITY -------------------- */
 .utility-links {
     display: flex;
     gap: 15px;
     margin-left: 20px;
 }
 
-.login-btn,
-.register-btn {
+.utility-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 14px;
     padding: 8px 20px;
     border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
 }
 
 .login-btn {
@@ -125,9 +177,7 @@ body {
     background: linear-gradient(90deg, #8e2bd1, #b74be0);
 }
 
-/* =======================================
-   FOOTER PADRONIZADO
-   ======================================= */
+/* -------------------- FOOTER -------------------- */
 footer {
     background-color: rgba(10, 10, 10, 0.95);
     color: #cccccc;
@@ -141,6 +191,7 @@ footer h3 {
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 15px;
+    color: #cccccc;
 }
 
 footer a {
@@ -158,29 +209,3 @@ footer img {
     height: 30px;
 }
 
-/* =======================================
-   RESPONSIVIDADE
-   ======================================= */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 20px;
-    }
-
-    .menu {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .utility-links {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .login-btn,
-    .register-btn {
-        width: 100%;
-        text-align: center;
-    }
-}

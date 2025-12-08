@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+// Se NÃO estiver logado → volta pro login
+// if (!isset($_SESSION['id'])) {
+//     header("Location: indexlogin.php");
+//     exit;
+// }
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -10,40 +19,40 @@
 </head>
 <body>
 
-<!-- CABEÇALHO PADRONIZADO -->
-<?php require_once 'include/header.php'; ?>
+    <!-- CABEÇALHO PADRONIZADO -->
+    <?php include 'include/header.php'; ?>
 
-<main>
-    <h1>PLANOS</h1>
-    <div class="principal">
-        <div class="card">
-            <h2>Plano Básico</h2>
-            <img src="View/img/plano_basico_corrigido.png" alt="Plano Básico">
-            <div class="pagamentos">
-                <h3>Formas de Pagamento</h3>
-                <div class="icones">
-                    <img src="View/img/Cartao.png" alt="Cartão">
-                    <img src="View/img/pix.png" alt="Pix">
+    <main>
+        <h1>PLANOS</h1>
+        <div class="principal">
+            <div class="card">
+                <h2>Plano Básico</h2>
+                <img src="View/img/plano_basico_corrigido.png" alt="Plano Básico">
+                <div class="pagamentos">
+                    <h3>Formas de Pagamento</h3>
+                    <div class="icones">
+                        <img src="View/img/Cartao.png" alt="Cartão">
+                        <img src="View/img/pix.png" alt="Pix">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Plano Avançado</h2>
+                <img src="View/img/PlanoAvançado.png" alt="Plano Avançado">
+                <div class="pagamentos">
+                    <h3>Formas de Pagamento</h3>
+                    <div class="icones">
+                        <img src="View/img/Cartao.png" alt="Cartão">
+                        <img src="View/img/pix.png" alt="Pix">
+                    </div>
                 </div>
             </div>
         </div>
+    </main>
 
-        <div class="card">
-            <h2>Plano Avançado</h2>
-            <img src="View/img/PlanoAvançado.png" alt="Plano Avançado">
-            <div class="pagamentos">
-                <h3>Formas de Pagamento</h3>
-                <div class="icones">
-                    <img src="View/img/Cartao.png" alt="Cartão">
-                    <img src="View/img/pix.png" alt="Pix">
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
-
-<!-- RODAPÉ PADRONIZADO -->
-<?php require_once 'include/footer.php'; ?>
+    <!-- RODAPÉ PADRONIZADO -->
+    <?php include 'include/footer.php'; ?>
 
 </body>
 </html>

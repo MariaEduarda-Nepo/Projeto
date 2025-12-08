@@ -19,8 +19,7 @@ switch($request) {
         require __DIR__ . '/View/indexagendaraulas.php';
         break;
     default:
-        http_response_code(404);
-        require __DIR__ . '/View/404.php';
+        echo "Página não encontrada.";
         break;
 }
 
