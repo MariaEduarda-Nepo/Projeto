@@ -180,7 +180,7 @@ session_start();
 
                 <div class="filial-card">
                     <div class="card-image-wrapper">
-                        <img src="View/img/ImagemAcademia2.png" alt="TechFit Vila">
+                        <img src="View/img/imagemacademia10.png" alt="TechFit Vila">
                     </div>
                     <div class="card-content">
                         <h3 class="filial-title">TechFit Vila</h3>
@@ -198,7 +198,7 @@ session_start();
 
                 <div class="filial-card">
                     <div class="card-image-wrapper">
-                        <img src="View/img/ImagemAcademia3.png" alt="TechFit Parque">
+                        <img src="View/img/imagemacademia13.png" alt="TechFit Parque">
                     </div>
                     <div class="card-content">
                         <h3 class="filial-title">TechFit Parque</h3>
@@ -216,7 +216,7 @@ session_start();
 
                 <div class="filial-card">
                     <div class="card-image-wrapper">
-                        <img src="View/img/ImagemAcademia4.jpg" alt="TechFit Praia">
+                        <img src="View/img/imagemacademia11.jpg" alt="TechFit Praia">
                     </div>
                     <div class="card-content">
                         <h3 class="filial-title">TechFit Praia</h3>
@@ -234,7 +234,7 @@ session_start();
 
                 <div class="filial-card">
                     <div class="card-image-wrapper">
-                        <img src="View/img/ImagemAcademia5.jpg" alt="TechFit Shopping">
+                        <img src="View/img/imagemacademia12.jpg" alt="TechFit Shopping">
                     </div>
                     <div class="card-content">
                         <h3 class="filial-title">TechFit Shopping</h3>
@@ -252,7 +252,7 @@ session_start();
 
                 <div class="filial-card">
                     <div class="card-image-wrapper">
-                        <img src="View/img/ImagemAcademia1.png" alt="TechFit Industrial">
+                        <img src="View/img/imagemacademia13.png" alt="TechFit Industrial">
                     </div>
                     <div class="card-content">
                         <h3 class="filial-title">TechFit Industrial</h3>
@@ -270,7 +270,7 @@ session_start();
 
                 <div class="filial-card">
                     <div class="card-image-wrapper">
-                        <img src="View/img/ImagemAcademia2.png" alt="TechFit Universitário">
+                        <img src="View/img/imagemacademia15.png" alt="TechFit Universitário">
                     </div>
                     <div class="card-content">
                         <h3 class="filial-title">TechFit Universitário</h3>
@@ -288,7 +288,7 @@ session_start();
 
                 <div class="filial-card">
                     <div class="card-image-wrapper">
-                        <img src="View/img/ImagemAcademia3.png" alt="TechFit Residencial">
+                        <img src="View/img/imagemacademia16.png" alt="TechFit Residencial">
                     </div>
                     <div class="card-content">
                         <h3 class="filial-title">TechFit Residencial</h3>
@@ -306,7 +306,7 @@ session_start();
 
                 <div class="filial-card">
                     <div class="card-image-wrapper">
-                        <img src="View/img/ImagemAcademia4.jpg" alt="TechFit Comercial">
+                        <img src="View/img/imagemacademia17.jpg" alt="TechFit Comercial">
                     </div>
                     <div class="card-content">
                         <h3 class="filial-title">TechFit Comercial</h3>
@@ -324,7 +324,7 @@ session_start();
 
                 <div class="filial-card">
                     <div class="card-image-wrapper">
-                        <img src="View/img/ImagemAcademia5.jpg" alt="TechFit Esportivo">
+                        <img src="View/img/imagemacademia18.jpg" alt="TechFit Esportivo">
                     </div>
                     <div class="card-content">
                         <h3 class="filial-title">TechFit Esportivo</h3>
@@ -342,7 +342,7 @@ session_start();
 
                 <div class="filial-card">
                     <div class="card-image-wrapper">
-                        <img src="View/img/ImagemAcademia1.png" alt="TechFit Premium">
+                        <img src="View/img/imagemacademia19.png" alt="TechFit Premium">
                     </div>
                     <div class="card-content">
                         <h3 class="filial-title">TechFit Premium</h3>
