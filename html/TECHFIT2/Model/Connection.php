@@ -6,7 +6,7 @@ class Connection {
         if (!self::$instance) {
             try {
                 $host = 'localhost';
-                $dbname = 'ProjetoTECHFIT';
+                $dbname = 'techfit';
                 $user = 'root';
                 $pass = 'senaisp';
 

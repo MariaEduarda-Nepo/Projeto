@@ -216,7 +216,7 @@ session_start();
 
                 <div class="filial-card">
                     <div class="card-image-wrapper">
-                        <img src="View/img/imagemacademia11.jpg" alt="TechFit Praia">
+                        <img src="View/img/imagemacademia21.png" alt="TechFit Praia">
                     </div>
                     <div class="card-content">
                         <h3 class="filial-title">TechFit Praia</h3>
@@ -234,7 +234,7 @@ session_start();
 
                 <div class="filial-card">
                     <div class="card-image-wrapper">
-                        <img src="View/img/imagemacademia12.jpg" alt="TechFit Shopping">
+                        <img src="View/img/imagemacademia12.png" alt="TechFit Shopping">
                     </div>
                     <div class="card-content">
                         <h3 class="filial-title">TechFit Shopping</h3>
@@ -252,7 +252,7 @@ session_start();
 
                 <div class="filial-card">
                     <div class="card-image-wrapper">
-                        <img src="View/img/imagemacademia13.png" alt="TechFit Industrial">
+                        <img src="View/img/imagemacademia23.png" alt="TechFit Industrial">
                     </div>
                     <div class="card-content">
                         <h3 class="filial-title">TechFit Industrial</h3>
@@ -306,7 +306,7 @@ session_start();
 
                 <div class="filial-card">
                     <div class="card-image-wrapper">
-                        <img src="View/img/imagemacademia17.jpg" alt="TechFit Comercial">
+                        <img src="View/img/imagemacademia17.png" alt="TechFit Comercial">
                     </div>
                     <div class="card-content">
                         <h3 class="filial-title">TechFit Comercial</h3>
@@ -324,7 +324,7 @@ session_start();
 
                 <div class="filial-card">
                     <div class="card-image-wrapper">
-                        <img src="View/img/imagemacademia18.jpg" alt="TechFit Esportivo">
+                        <img src="View/img/imagemacademia18.png" alt="TechFit Esportivo">
                     </div>
                     <div class="card-content">
                         <h3 class="filial-title">TechFit Esportivo</h3>
