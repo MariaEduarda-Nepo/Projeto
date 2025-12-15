@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* -------------------- BODY -------------------- */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    position: relative;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2d2d2d, #3d3d3d, #4d4d4d);
+    background-attachment: fixed;
+    color: white;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* -------------------- TÍTULO -------------------- */
+.Container h1 {
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 32px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #8b5cf6, #a78bfa, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* -------------------- MENSAGENS -------------------- */
+.mensagem {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.erro {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+.sucesso {
+    color: #4cd137;
+    font-weight: bold;
+}
+
+/* -------------------- CONTAINER PRINCIPAL -------------------- */
+.Container {
+    width: 100%;
+    min-height: calc(100vh - 120px);
+    padding: 30px 20px;
+    padding-bottom: 50px;
+    padding-top: 60px;
+    box-sizing: border-box;
+}
+
+/* -------------------- FORMULÁRIO DE LOGIN -------------------- */
+.Container .Cadastrar {
+    background: linear-gradient(145deg, rgba(45, 45, 45, 0.95), rgba(55, 55, 55, 0.95));
+    padding: 50px;
+    border-radius: 25px;
+    width: 50%;
+    max-width: 500px;
+    height: auto;
+    min-height: 400px;
+    margin: 50px auto 80px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), 0 5px 15px rgba(139, 92, 246, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    box-sizing: border-box;
+}
+
+/* Remove scrollbar do formulário de login */
+.Container .Cadastrar::-webkit-scrollbar {
+    display: none;
+}
+
+.Container .Cadastrar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: visible;
+    overflow-x: hidden;
+}
+
+.Container .Cadastrar h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    background: linear-gradient(135deg, #8b5cf6, #a78bfa, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Inputs do formulário de login - maiores */
+.Container .Cadastrar input {
+    border-radius: 12px;
+    border: 2px solid rgba(139, 92, 246, 0.3);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(240, 240, 240, 0.95));
+    width: 85%;
+    min-width: 300px;
+    max-width: 100%;
+    padding: 16px 20px;
+    font-size: 17px;
+    height: 55px;
+    margin: 8px auto;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    color: #1a1a2e;
+    display: block;
+}
+
+.Container .Cadastrar input:focus {
+    outline: none;
+    border: 2px solid #8b5cf6;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 1), rgba(250, 250, 250, 1));
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Labels do formulário de login - alinhados com os inputs */
+.Container .Cadastrar .field-label {
+    display: block;
+    text-align: left;
+    font-size: 15px;
+    color: #e0e0e0;
+    width: 85%;
+    min-width: 300px;
+    max-width: 100%;
+    margin: 15px auto 5px;
+    font-weight: 500;
+}
+
+/* Botão do formulário de login - mesmo tamanho dos inputs */
+.Container .Cadastrar button {
+    width: 85%;
+    min-width: 300px;
+    max-width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #7c3aed, #8b5cf6, #9333ea);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 20px auto 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+.Container .Cadastrar button:hover {
+    background: linear-gradient(135deg, #9333ea, #a78bfa, #a855f7);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.6);
+}
+
+.Container .Cadastrar button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(168, 59, 211, 0.4);
+}
+
+/* -------------------- HEADER -------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: rgba(45, 45, 45, 0.95);
+    border-bottom: 2px solid #8b5cf6;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo-text strong {
+    font-size: 24px;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.logo-text .fit {
+    color: #8b5cf6;
+    font-weight: bold;
+}
+
+.logo-text .subtext {
+    font-size: 10px;
+    color: #cccccc;
+}
+
+/* Botões topo */
+.utility-links {
+    display: flex;
+    gap: 15px;
+}
+
+.login-btn, .register-btn {
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.login-btn {
+    background-color: transparent;
+    border: 2px solid #a83bd3;
+    color: #8b5cf6;
+}
+
+.login-btn:hover {
+    background-color: #a83bd3;
+    color: #ffffff;
+}
+
+.register-btn {
+    background: linear-gradient(90deg, #7c3aed, #8b5cf6);
+    color: white;
+    border: none;
+}
+
+.register-btn:hover {
+    background: linear-gradient(90deg, #9333ea, #a78bfa);
+}
+
+/* -------------------- FOOTER -------------------- */
+footer {
+    background-color: rgba(35, 35, 35, 0.95);
+    color: #cccccc;
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 2px solid #8b5cf6;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+footer a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+footer a:hover {
+    transform: scale(1.1);
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+}
+

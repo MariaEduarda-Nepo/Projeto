@@ -1,0 +1,16 @@
+===========================================
+CREDENCIAIS DO ADMINISTRADOR PADRÃO
+===========================================
+
+Email: admin@funcionario.com
+Senha: admin123
+
+===========================================
+IMPORTANTE:
+- Este usuário é criado automaticamente quando o banco de dados é inicializado pela primeira vez
+- Se já existir um funcionário no banco, o admin padrão NÃO será criado
+- Altere a senha após o primeiro acesso por segurança
+- Este arquivo pode ser deletado após anotar as credenciais
+
+===========================================
+
